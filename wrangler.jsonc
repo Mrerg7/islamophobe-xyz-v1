@@ -1,7 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
   "name": "islamophobe-xyz-v1",
-  "main": "./dist/index.html",
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
