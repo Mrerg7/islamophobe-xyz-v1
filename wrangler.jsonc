@@ -3,11 +3,7 @@
   "name": "islamophobe-xyz-v1",
   "assets": {
     "directory": "./dist",
-    "binding": "ASSETS",
     "html_handling": "force-trailing-slash"
   },
-  "compatibility_date": "2026-06-01",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+  "compatibility_date": "2026-06-01"
 }
