@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+}
+
+const { site } = Astro.props;
+const { previousGenerations } = site.data;
+---
+
+<section class="relative py-24 sm:py-32 px-6 bg-white/[0.02]">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="section-header text-white mb-12">
+      What Previous Generations <span class="text-gradient-fire">Understood</span>
+    </h2>
+    <div class="space-y-6 text-lg text-white/70 leading-relaxed">
+      {previousGenerations.paragraphs.map((p) => (
+        <p>{p}</p>
+      ))}
+    </div>
+  </div>
+</section>

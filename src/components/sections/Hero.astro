@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { SECONDARY_IMAGE } from '../../lib/site';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+}
+
+const { site } = Astro.props;
+const { hero } = site.data;
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background image overlay -->
+  <div
+    class="absolute inset-0 z-0"
+    style={`background-image: url('${SECONDARY_IMAGE}'); background-size: cover; background-position: center;`}
+  >
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+
+  <!-- Decorative elements -->
+  <div
+    class="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-red-600/10 blur-3xl pointer-events-none"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-red-800/10 blur-3xl pointer-events-none"
+    aria-hidden="true"
+  ></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-32 text-center">
+    <p class="text-xs uppercase tracking-[4px] text-red-400 font-extrabold mb-6">The Label They Invented Is Now Our Badge</p>
+
+    <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-6 leading-[0.95]">
+      <span class="text-gradient-red">ISLAMOPHOBE</span><span class="text-white">.XYZ</span>
+    </h1>
+
+    <p class="text-lg sm:text-xl text-red-400 font-bold max-w-3xl mx-auto mb-6 leading-snug uppercase tracking-wide">
+      {hero.subheadline}
+    </p>
+
+    <p class="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+      {hero.paragraphs[0]}
+    </p>
+
+    <p class="text-base text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed">
+      {hero.paragraphs[1]}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#imperative" class="inline-flex items-center gap-x-2 px-8 py-4 bg-red-700 hover:bg-red-600 text-white font-extrabold rounded-lg transition-colors text-base">
+        Read the Case
+      </a>
+      <a href="#the-pledge" class="inline-flex items-center gap-x-2 px-8 py-4 border border-red-700 text-red-400 hover:bg-red-950/50 font-extrabold rounded-lg transition-colors text-base">
+        Sign the Pledge
+      </a>
+      <button
+        class="inline-flex items-center gap-x-2 px-8 py-4 border border-white/15 text-white/70 hover:bg-white/5 font-extrabold rounded-lg transition-colors text-base"
+        onclick="navigator.share({ title: document.title, url: window.location.href }).catch(() => {})"
+      >
+        Share This Site
+      </button>
+    </div>
+  </div>
+</section>

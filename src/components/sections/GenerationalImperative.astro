@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+}
+
+const { site } = Astro.props;
+const { generationalImperative } = site.data;
+---
+
+<section id="imperative" class="relative py-24 sm:py-32 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="relative border-l-4 border-red-700 pl-8">
+      <h2 class="section-header text-white mb-8">
+        The Generational <span class="text-gradient-fire">Imperative</span>
+      </h2>
+      <p class="text-lg text-white/90 font-semibold mb-6 leading-relaxed">
+        {generationalImperative.intro}
+      </p>
+      <div class="space-y-6 text-lg text-white/70 leading-relaxed">
+        {generationalImperative.paragraphs.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+      <p class="mt-8 text-xl text-red-400 font-bold">
+        {generationalImperative.closingLine}
+      </p>
+    </div>
+  </div>
+</section>

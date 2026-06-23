@@ -1,0 +1,160 @@
+{
+  "siteName": "Islamophobe.xyz",
+  "tagline": "All Generations Must Reject Sharia Law — Without Patience. Without Remorse. Without Apologies.",
+  "acquisitionEmail": "sales@desertrich.com",
+  "heroImage": "https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/b898a16d-4ed1-44f6-b8fc-d9ec5f042800/public",
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "The Imperative", "href": "#imperative" },
+    { "label": "No Patience", "href": "#no-patience" },
+    { "label": "No Remorse", "href": "#no-remorse" },
+    { "label": "No Apologies", "href": "#no-apologies" },
+    { "label": "The Record", "href": "#the-record" },
+    { "label": "The Pledge", "href": "#the-pledge" },
+    { "label": "Take Action", "href": "#take-action" }
+  ],
+  "hero": {
+    "headline": "ISLAMOPHOBE.XYZ",
+    "subheadline": "ALL GENERATIONS MUST REJECT SHARIA LAW.",
+    "taglineText": "Without Patience. Without Remorse. Without Apologies.",
+    "paragraphs": [
+      "The time for negotiation is over. The time for clarity has arrived.",
+      "Previous generations did not apologize for rejecting ideologies that sought to destroy their civilization. Neither will we."
+    ],
+    "closingLine": "This is not a partisan issue. It is a civilizational one."
+  },
+  "generationalImperative": {
+    "title": "The Generational Imperative",
+    "intro": "Sharia is not a personal faith that can be politely contained. It is a comprehensive political, legal, and social system that demands supremacy over every other order.",
+    "paragraphs": [
+      "For decades it has been given patience. It has been given understanding. It has been given the benefit of the doubt while its demands expanded.",
+      "The results are visible across the West: parallel societies operating under de facto Sharia, industrial-scale grooming scandals shielded by political correctness, child marriage and honor-based violence imported into our cities, growing pressure to accommodate Sharia in schools, courts, and public life.",
+      "Every generation alive today carries a responsibility. Those who remember a more confident West have a duty to finish what earlier generations started when they rejected other totalitarian systems. Those raising children have a duty to protect them from an ideology that sexualizes minors and subordinates women. The young have a duty to refuse the future being prepared for them — one of shrinking freedom and imported medieval norms."
+    ],
+    "closingLine": "All generations. One clear rejection."
+  },
+  "previousGenerations": {
+    "title": "What Previous Generations Understood",
+    "paragraphs": [
+      "The greatest generations of the 20th century did not spend decades in 'dialogue' with Nazism or offer endless patience to Soviet communism while it advanced. They named the ideology. They rejected its claims. They defended their societies without apology.",
+      "Sharia has received more accommodation than either of those systems ever did. The outcome has been the slow colonization of Western institutions, neighborhoods, and norms. We are not required to repeat their mistake.",
+      "Sharia has had its decades of patience. The results are in."
+    ]
+  },
+  "noPatience": {
+    "title": "No Patience Left",
+    "paragraphs": [
+      "Patience has been tried. It produced no-go zones, grooming gang cover-ups, Sharia councils operating in Western cities, and the normalization of child marriage in the name of culture.",
+      "Patience is not a virtue when the cost is the safety of children and the survival of liberal democracy."
+    ],
+    "closingLine": "We are out of patience."
+  },
+  "noRemorse": {
+    "title": "No Remorse",
+    "paragraphs": [
+      "Remorse is for those who failed to act while their civilization was eroded. Remorse is for those who looked away while little girls were married off under religious sanction. Remorse is for those who prioritized feelings over facts and imported a system incompatible with everything the West stands for."
+    ],
+    "closingLine": "We will not feel remorse for defending our daughters, our sons, and our inheritance."
+  },
+  "noApologies": {
+    "title": "No Apologies",
+    "paragraphs": [
+      "We will not apologize for noticing that Sharia sanctions the marriage of grown men to prepubescent girls. We will not apologize for saying that death for apostasy and blasphemy has no place in free societies. We will not apologize for rejecting a legal system in which women are worth half and non-Muslims are second-class."
+    ],
+    "closingLine": "Apologies are for those who surrender. We are not surrendering."
+  },
+  "theRecord": {
+    "title": "The Record Across Generations",
+    "intro": "The evidence has been clear for decades. Here is what accommodation has produced:",
+    "items": [
+      {
+        "label": "Child Marriage",
+        "body": "Still widespread in Sharia-influenced societies and imported into the West. The model remains Muhammad's marriage to Aisha at six (consummated at nine). This is not ancient history — it is active practice and theological precedent."
+      },
+      {
+        "label": "Pew Research",
+        "body": "In country after country where Muslims are asked, majorities support making Sharia the law of the land — often with hudud punishments included."
+      },
+      {
+        "label": "Europe's Warning",
+        "body": "Decades of patience produced grooming scandals on a massive scale, parallel societies, exploding antisemitism, and collapsing social trust."
+      },
+      {
+        "label": "The West Today",
+        "body": "The same pattern is accelerating under elite denial. Sharia does not moderate with time. It advances where it is accommodated."
+      }
+    ],
+    "closingLine": "The record is unambiguous. The question is whether we will read it."
+  },
+  "multigenerationalStand": {
+    "title": "The Multi-Generational Stand",
+    "paragraphs": [
+      "This is not the project of one age group. It is the duty of all of them. Boomers and Gen X saw the warnings ignored for decades. Millennials and Gen Z are living with the consequences in real time. Gen Alpha will inherit whatever we leave them.",
+      "Every generation has skin in this fight. We reject the idea that criticizing Sharia is 'bigotry.' We reject the idea that protecting children from medieval practices is 'phobic.' We reject the idea that our civilization must slowly dissolve itself to accommodate an ideology that has never coexisted with freedom."
+    ]
+  },
+  "thePledge": {
+    "title": "The No-Apologies Pledge",
+    "intro": "Add your name. Cross your generation. Make it public.",
+    "lines": [
+      "I reject Sharia Law without patience, without remorse, and with zero apologies.",
+      "I will not pretend it is compatible with Western values.",
+      "I will not excuse child marriage, gender apartheid, or death for apostasy as 'culture.'",
+      "I will not stay silent while this system expands into our schools, courts, and neighborhoods.",
+      "I stand with every generation that refuses to surrender its children and its civilization."
+    ],
+    "signatureLabel": "Signed",
+    "generationLabel": "Generation",
+    "closingLine": "The label they invented to silence us is now our badge."
+  },
+  "takeAction": {
+    "title": "Take Action — Right Now",
+    "steps": [
+      {
+        "title": "Sign the No-Apologies Pledge",
+        "description": "Add your name and share it with your generation. The Overton window moves when enough people stop apologizing for noticing."
+      },
+      {
+        "title": "Speak Without Hedging",
+        "description": "The social cost of clarity is real. Pay it anyway. Every honest conversation reclaims ground."
+      },
+      {
+        "title": "Support Legislation",
+        "description": "Back laws that explicitly reject Sharia accommodations, ban recognition of underage religious marriages, and prioritize Western child protection standards."
+      },
+      {
+        "title": "Protect the Next Generation",
+        "description": "Report abuse. Support those escaping Sharia. Raise children who will not be gaslit about reality."
+      },
+      {
+        "title": "Share This Site",
+        "description": "Break the wall of censorship. Forward across age groups. Facts do not require permission."
+      }
+    ],
+    "crossLinkLabel": "For the detailed case on child marriage and Sharia's specific incompatibilities, visit islamophobe.me",
+    "crossLinkUrl": "https://islamophobe.me"
+  },
+  "footer": {
+    "tagline": "All Generations Must Reject Sharia Law — Without Patience. Without Remorse. Without Apologies.",
+    "disclaimer": "This website is for demonstration and informational purposes only. It does not constitute an offer of services, a commitment to deploy, or a guarantee of outcomes. All statistics, projections, and references to specific technologies are based on publicly available information as of the date shown and are subject to change.",
+    "acquisitionHeadline": "islamophobe.xyz — Premium Domain Available for Acquisition",
+    "acquisitionBody": "islamophobe.xyz is a category-defining domain for advocacy, cultural commentary, and generational messaging. One owner. One voice. Unlimited reach. Serious buyers may inquire for pricing, transfer logistics, and escrow options.",
+    "acquisitionCta": "Inquire About Domain Acquisition",
+    "copyright": "© 2026 Islamophobe.xyz — All Rights Reserved",
+    "finalLine": "Sharia has been given every chance. It has failed every test. All generations. One rejection. No patience. No remorse. No apologies."
+  },
+  "seo": {
+    "title": "Islamophobe.xyz | All Generations Must Reject Sharia Law — Without Patience, Remorse, or Apologies",
+    "description": "Previous generations rejected fascism and communism without apology. Sharia deserves the same clarity. Every living generation has a duty to reject it — without patience, without remorse, and with zero apologies.",
+    "keywords": [
+      "Islamophobe",
+      "reject Sharia law",
+      "generational rejection",
+      "Sharia incompatibility",
+      "Western values",
+      "child marriage",
+      "no apologies",
+      "civilizational stand"
+    ]
+  }
+}

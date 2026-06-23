@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+import type { CollectionEntry } from 'astro:content';
+import SeoHead from '../components/SeoHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+  canonicalPath?: string;
+}
+
+const { site, canonicalPath } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SeoHead site={site} canonicalPath={canonicalPath} />
+    <slot name="head" />
+  </head>
+  <body class="min-h-screen font-sans">
+    <Header site={site} />
+    <main class="pt-[4.25rem]">
+      <slot />
+    </main>
+    <Footer site={site} />
+  </body>
+</html>

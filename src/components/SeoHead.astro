@@ -1,0 +1,143 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { HERO_IMAGE } from '../lib/site';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+  canonicalPath?: string;
+}
+
+const { site, canonicalPath = '/' } = Astro.props;
+const { seo, siteName, tagline } = site.data;
+const canonical = new URL(canonicalPath, 'https://islamophobe.xyz').href;
+const ogImage = HERO_IMAGE;
+const publishedDate = '2026-06-23';
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Islamophobe.xyz',
+  url: 'https://islamophobe.xyz',
+  description: seo.description,
+  logo: ogImage,
+  sameAs: ['https://islamophobe.me'],
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: 'https://islamophobe.xyz',
+  description: tagline,
+  inLanguage: 'en-US',
+};
+
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${canonical}#webpage`,
+  url: canonical,
+  name: seo.title,
+  description: seo.description,
+  datePublished: publishedDate,
+  dateModified: publishedDate,
+  isPartOf: { '@id': 'https://islamophobe.xyz/#website' },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: ogImage,
+  },
+  inLanguage: 'en-US',
+};
+
+const productJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': 'https://islamophobe.xyz/#product',
+  name: 'islamophobe.xyz Premium Domain Name',
+  description:
+    'The premium domain islamophobe.xyz — a bold, controversial brand asset engineered for advocacy, generational messaging, and cultural commentary. Available for strategic acquisition.',
+  url: 'https://islamophobe.xyz',
+  image: ogImage,
+  category: 'Premium Domain Name',
+  brand: {
+    '@type': 'Brand',
+    name: 'islamophobe.xyz',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: 'mailto:sales@desertrich.com?subject=islamophobe.xyz%20Domain%20Acquisition%20Inquiry',
+    price: '50000',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: 'Islamophobe.xyz',
+      email: 'sales@desertrich.com',
+    },
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    bestRating: '5',
+    ratingCount: '1',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://islamophobe.xyz',
+    },
+  ],
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="google-site-verification" content="1uAq4UX8awhYMcv3Oih8-rhyddLqt-BrGUCWSF3Esnw" />
+<meta name="generator" content={Astro.generator} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href={canonical} />
+
+<title>{seo.title}</title>
+<meta name="description" content={seo.description} />
+<meta name="keywords" content={seo.keywords.join(', ')} />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content={siteName} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={seo.title} />
+<meta property="og:description" content={seo.description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Islamophobe.xyz — All Generations Must Reject Sharia Law" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={seo.title} />
+<meta name="twitter:description" content={seo.description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content="Islamophobe.xyz — All Generations Must Reject Sharia Law" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://imagedelivery.net" crossorigin />
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPageJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />

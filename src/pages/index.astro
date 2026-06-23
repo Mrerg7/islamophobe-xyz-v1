@@ -1,0 +1,30 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import GenerationalImperative from '../components/sections/GenerationalImperative.astro';
+import PreviousGenerations from '../components/sections/PreviousGenerations.astro';
+import NoSection from '../components/sections/NoSection.astro';
+import TheRecord from '../components/sections/TheRecord.astro';
+import MultigenerationalStand from '../components/sections/MultigenerationalStand.astro';
+import ThePledge from '../components/sections/ThePledge.astro';
+import TakeAction from '../components/sections/TakeAction.astro';
+
+const site = await getEntry('site', 'home');
+if (!site) {
+  throw new Error('Site content entry "home" not found');
+}
+---
+
+<BaseLayout site={site}>
+  <Hero site={site} />
+  <GenerationalImperative site={site} />
+  <PreviousGenerations site={site} />
+  <NoSection site={site} section="noPatience" />
+  <NoSection site={site} section="noRemorse" />
+  <NoSection site={site} section="noApologies" />
+  <TheRecord site={site} />
+  <MultigenerationalStand site={site} />
+  <ThePledge site={site} />
+  <TakeAction site={site} />
+</BaseLayout>

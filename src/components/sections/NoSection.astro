@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+  section: 'noPatience' | 'noRemorse' | 'noApologies';
+}
+
+const { site, section } = Astro.props;
+const data = site.data[section];
+const sectionId = section === 'noPatience' ? 'no-patience' : section === 'noRemorse' ? 'no-remorse' : 'no-apologies';
+---
+
+<section id={sectionId} class="relative py-24 sm:py-32 px-6 bg-white/[0.02]">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="section-header text-white mb-12">
+      <span class="text-gradient-fire">{data.title}</span>
+    </h2>
+    <div class="space-y-6 text-lg text-white/70 leading-relaxed">
+      {data.paragraphs.map((p: string) => (
+        <p>{p}</p>
+      ))}
+    </div>
+    <p class="mt-8 text-xl text-red-400 font-bold">
+      {data.closingLine}
+    </p>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+}
+
+const { site } = Astro.props;
+const { takeAction } = site.data;
+---
+
+<section id="take-action" class="relative py-24 sm:py-32 px-6 bg-white/[0.02]">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="section-header text-white mb-12 text-center">
+      Take Action — <span class="text-gradient-fire">Right Now</span>
+    </h2>
+
+    <div class="grid sm:grid-cols-2 gap-6 mb-12">
+      {takeAction.steps.map((step, i) => (
+        <div class="border border-red-900/20 rounded-2xl p-6 bg-white/[0.03] backdrop-blur-sm">
+          <div class="text-red-500 text-sm font-bold mb-3 uppercase tracking-wider">
+            Step {i + 1}
+          </div>
+          <h3 class="text-lg font-display text-white mb-2">{step.title}</h3>
+          <p class="text-white/60 leading-relaxed text-sm">{step.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center border-t border-red-500/10 pt-10">
+      <a
+        href={takeAction.crossLinkUrl}
+        class="inline-flex items-center gap-x-2 text-red-400 hover:text-red-300 font-semibold transition-colors text-lg"
+      >
+        {takeAction.crossLinkLabel}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

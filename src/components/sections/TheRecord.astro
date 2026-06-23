@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>;
+}
+
+const { site } = Astro.props;
+const { theRecord } = site.data;
+---
+
+<section id="the-record" class="relative py-24 sm:py-32 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="section-header text-white mb-8">
+      The Record <span class="text-gradient-fire">Across Generations</span>
+    </h2>
+    <p class="text-lg text-white/70 mb-12 leading-relaxed">
+      {theRecord.intro}
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-6 mb-10">
+      {theRecord.items.map((item) => (
+        <div class="border border-red-900/20 rounded-xl p-6 bg-white/[0.03] backdrop-blur-sm">
+          <h3 class="text-lg font-display text-red-400 mb-3">{item.label}</h3>
+          <p class="text-white/65 leading-relaxed text-sm">{item.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-xl text-red-400 font-bold text-center">
+      {theRecord.closingLine}
+    </p>
+  </div>
+</section>
